@@ -1,0 +1,9 @@
+<div dnd-droppable class="my-drop-zone" (onDropSuccess)="transferDataSuccess($event)">
+  <div>{{partName}} (Items:{{images.length}})</div>
+  <div>
+    <div [hidden]="!images.length > 0" *ngFor="let image of images">
+      <!-- preview directiveにimage file情報を渡す -->
+    <img src="" imgPreview [image]="image" class="media-object" />
+    </div>
+  </div>
+</div>
